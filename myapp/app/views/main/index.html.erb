@@ -1,0 +1,39 @@
+<h1>消費カロリー計算サイト</h1>
+<p>摂取カロリーに対しての適切な運動量を計算します</p>
+<%= form_tag("/", method: "get") do %>
+<table>
+  <tr>
+    <td><%= label_tag :value1, "カロリー摂取量" %></td>
+    <td><%= text_field_tag :value1 %></td>
+    <td></td>
+  </tr>
+  <tr>
+     <td><%= submit_tag "変換" %></td>
+     </tr>
+   
+  <tr>
+    <td><%= label_tag :result, "ランニング(h)" %></td>
+    <td><%= text_field_tag :result, @result %></td>
+<td></td>
+  </tr>
+ 
+  <tr>
+    <td><%= label_tag :result2, "ウォーキング(h)" %></td>
+    <td><%= text_field_tag :result2, @result2 %></td>
+<td></td>
+  </tr>
+  
+   <tr>
+    <td><%= label_tag :result3, "クロール(h)" %></td>
+    <td><%= text_field_tag :result3, @result %></td>
+<td></td>
+  </tr>
+  
+  <tr>
+    <td><%= label_tag :result4, "自転車(h)" %></td>
+    <td><%= text_field_tag :result4, @result %></td>
+<td></td>
+  </tr>
+  
+</table>
+<% end %>
